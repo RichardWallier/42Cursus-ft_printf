@@ -3,27 +3,39 @@
 
 # include "libft/libft.h"
 # include <stdarg.h>
-
-void	choose_type(char c, va_list ap);
-
-void	string_output(va_list ap);
-
-void	char_output(va_list ap);
-
-void	integer_output(va_list ap);
-
-void	unsigned_decimal_output(va_list ap);
-
-void	hexadecimal_lowercase_output(va_list ap);
-
-void	hexadecimal_uppercase_output(va_list ap);
-
-void	percent_output();
-
-void	ft_putnbr_hexadecimal_lowercase_fd(long long n, int fd);
-
-void	ft_putnbr_hexadecimal_uppercase_fd(long long n, int fd);
+#include <stdio.h>
 
 int		ft_printf(const char *s, ...);
+
+int		is_type(char c);
+
+int		choose_type(char c, va_list ap);
+
+int		string_output(va_list ap);
+
+int		char_output(va_list ap);
+
+int		integer_output(va_list ap);
+
+int		pointer_output(va_list ap);
+
+int		unsigned_decimal_output(va_list ap);
+
+int		hexadecimal_uppercase_output(va_list ap);
+
+int		hexadecimal_lowercase_output(va_list ap);;
+
+int		percent_output();
+
+void	ft_putnbr_hexadecimal_lowercase_fd(unsigned long int n, int fd);
+
+void	ft_putnbr_hexadecimal_uppercase_fd(unsigned long int n, int fd);
+
+void	ft_putpointer_hex(unsigned long int n, int fd);
+
+
+int		count_decimal(long long number);
+
+int		count_hexa(long long number);
 
 #endif
